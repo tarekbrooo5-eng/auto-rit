@@ -95,7 +95,7 @@
                             transcriptContent.appendChild(div);
                         });
                     } else {
-                        transcriptContent.innerHTML = "<p>تمت المعالجة ولكن لم يتم العثور على كلمات واضحة.</p>";
+                        transcriptContent.innerHTML = "<p style='color: #fbbf24;'>تمت المعالجة، ولكن لم يتم اكتشاف كلمات واضحة في هذا الملف.</p>";
                     }
                 } else {
                     alert("خطأ من السيرفر: " + (result.error || "حدث خطأ غير معروف"));
@@ -103,7 +103,7 @@
 
             } catch (error) {
                 console.error(error);
-                alert("فشل الاتصال بالسيرفر. تذكر أن الباقة المجانية على Render قد تأخذ حوالي 50 ثانية للاستيقاظ في أول طلب.");
+                alert("فشل الاتصال بالسيرفر. تذكر أن الباقة المجانية على Render قد تأخذ حوالي 50 ثانية للاستيقاظ إذا كان السيرفر في وضع السكون.");
             } finally {
                 uploadBtn.disabled = false;
                 loadingText.style.display = "none";
